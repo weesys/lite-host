@@ -1,0 +1,74 @@
+@import './tailwind.css';
+
+body {
+  /* Default light theme colors */
+  --custom-bg-color: #f5f5f5;
+  --custom-text-color: #333333;
+  --custom-button-bg-color: #4a86e8;
+  --custom-button-text-color: #ffffff;
+
+  /* Dark theme colors */
+  --custom-dark-bg-color: #1e293b;
+  --custom-dark-text-color: #ffffff;
+  --custom-dark-button-bg-color: #4a86e8;
+  --custom-dark-button-text-color: #ffffff;
+}
+
+body.dark {
+  /* Override with dark theme colors */
+  --custom-bg-color: var(--custom-dark-bg-color);
+  --custom-text-color: var(--custom-dark-text-color);
+  --custom-button-bg-color: var(--custom-dark-button-bg-color);
+  --custom-button-text-color: var(--custom-dark-button-text-color);
+}
+
+.App {
+  background-color: var(--custom-bg-color);
+  color: var(--custom-text-color);
+}
+
+
+.dropzone-container {
+  border: 2px dashed var(--custom-button-bg-color);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.dropzone-container p {
+  margin-top: 1rem;
+}
+
+.uploaded-file {
+  max-width: 200px;
+  margin: 2rem auto;
+  display: block;
+}
+
+.theme-toggle-button {
+  background-color: var(--custom-button-bg-color);
+  color: var(--custom-button-text-color);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: yellow;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
